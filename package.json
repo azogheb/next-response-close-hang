@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "start:tracked": "NODE_OPTIONS=\"--require ./scripts/track-pending.cjs\" next start",
+    "repro:forced": "node scripts/reproduce.mjs forced",
+    "repro:natural": "node scripts/reproduce.mjs natural",
+    "repro:pipe": "node scripts/pipe-only.cjs",
+    "apply-fix": "node scripts/apply-fix.mjs"
+  },
+  "dependencies": {
+    "next": "canary",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "typescript": "^5"
+  }
+}
